@@ -3,15 +3,17 @@ body {
 }
 
 h1 {
-    padding-top: 25px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 img {
-    height: 5em;
+    padding: 1em;
+    height: 10em;
     width: auto;
     cursor: pointer;
 }
 
 button:hover {
-    color: gray;
+    background: lightgray;
 }
