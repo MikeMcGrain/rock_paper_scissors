@@ -3,13 +3,13 @@ body {
 }
 
 h1 {
-    padding-top: 40px;
+    padding-top: 30px;
     padding-bottom: 40px;
 }
 
 img {
     padding: 1em;
-    height: 10em;
+    height: 15em;
     width: auto;
     cursor: pointer;
 }
