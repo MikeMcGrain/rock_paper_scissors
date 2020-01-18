@@ -22,15 +22,12 @@ function getBrowserPick() {
 
 function comparePicks(userPick, browserPick) {
     let result
-
-    if (userPick == browserPick) { result = "You both die"    
-    } else if (userPick === "Bear" && browserPick === "Ninja") { result = "lose"
-    } else if (userPick === "Bear" && browserPick === "Cowboy") { result = "win"
-    } else if (userPick === "Ninja" && browserPick === "Bear") { result = "win"
-    } else if (userPick === "Ninja" && browserPick === "Cowboy") { result = "lose"
-    } else if (userPick === "Cowboy" && browserPick === "Bear") { result = "lose"
-    } else if (userPick === "Cowboy" && browserPick === "Ninja") { result = "win"
-    }
+    if (userPick == browserPick) {result = "both die"} 
+    else if (userPick == "Bear" && browserPick == "Ninja") {result = "win"} 
+    else if (userPick == "Bear" && browserPick == "Cowboy") {result = "lose"}
+    else if (userPick == "Ninja" && browserPick == "Cowboy") {result = "win"}
+    else if (userPick == "Ninja" && browserPick == "Bear") {result = "lose"}
+    else if (userPick == "Cowboy" && browserPick == "Bear") {result = "win"}
+    else if (userPick == "Cowboy" && browserPick == "Ninja") {result = "lose"}
     document.getElementById("result").innerHTML = `You ${result}!`
-
 }
