@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+}
+
+h1 {
+    padding-top: 25px;
+}
+
+img {
+    height: 5em;
+    width: auto;
+    cursor: pointer;
+}
+
+button:hover {
+    color: gray;
+}
