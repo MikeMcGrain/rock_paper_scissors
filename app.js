@@ -6,10 +6,7 @@ function startGame() {
     //get user's pick
     let userPick = this.getAttribute("data-user-pick")
     document.getElementById("user-pick").innerHTML = `You picked ${userPick}!`
-
-    getBrowserPick()
-
-    comparePicks()
+    comparePicks(userPick,  getBrowserPick())
 }
 
 function getBrowserPick() {
@@ -19,11 +16,21 @@ function getBrowserPick() {
     case 1: browserPick = "Ninja"; break
     case 2: browserPick = "Cowboy"
     }
-document.getElementById("browser-pick").innerHTML = `Your browser picked ${browserPick}!`
+    document.getElementById("browser-pick").innerHTML = `Your browser picked ${browserPick}!`
+    return browserPick
 }
 
-function comparePicks() {
-    // let result = "win" || "lose"
-    // document.getElementById("result").innerHTML = `You ${result}!`
+function comparePicks(userPick, browserPick) {
+    let result
+
+    if (userPick == browserPick) { result = "You both die"    
+    } else if (userPick === "Bear" && browserPick === "Ninja") { result = "lose"
+    } else if (userPick === "Bear" && browserPick === "Cowboy") { result = "win"
+    } else if (userPick === "Ninja" && browserPick === "Bear") { result = "win"
+    } else if (userPick === "Ninja" && browserPick === "Cowboy") { result = "lose"
+    } else if (userPick === "Cowboy" && browserPick === "Bear") { result = "lose"
+    } else if (userPick === "Cowboy" && browserPick === "Ninja") { result = "win"
+    }
+    document.getElementById("result").innerHTML = `You ${result}!`
 
 }
