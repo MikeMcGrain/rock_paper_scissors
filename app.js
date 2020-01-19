@@ -1,10 +1,10 @@
-document.getElementById("bear-btn").addEventListener("click", startGame)
-document.getElementById("ninja-btn").addEventListener("click", startGame)
-document.getElementById("cowboy-btn").addEventListener("click", startGame)
+document.getElementById("bear-btn").addEventListener("click", getUserPick)
+document.getElementById("ninja-btn").addEventListener("click", getUserPick)
+document.getElementById("cowboy-btn").addEventListener("click", getUserPick)
 
-function startGame() {
+function getUserPick() {
     let userPick = this.getAttribute("data-user-pick")
-    document.getElementById("user-pick").innerHTML = `You picked ${userPick}!`
+    document.getElementById("user-pick").innerHTML = `You picked ${userPick}!`  
     comparePicks(userPick,  getBrowserPick())
 }
 
@@ -31,16 +31,3 @@ function comparePicks(userPick, browserPick) {
     } 
     document.getElementById("result").innerHTML = `You ${result}!`
 }
-
-// alternative compare function
-// function comparePicks(userPick, browserPick) {
-//     let result
-//     if (userPick == browserPick) {result = "both die"} 
-//     else if (userPick == "Bear" && browserPick == "Ninja") {result = "win"} 
-//     else if (userPick == "Bear" && browserPick == "Cowboy") {result = "lose"}
-//     else if (userPick == "Ninja" && browserPick == "Cowboy") {result = "win"}
-//     else if (userPick == "Ninja" && browserPick == "Bear") {result = "lose"}
-//     else if (userPick == "Cowboy" && browserPick == "Bear") {result = "win"}
-//     else if (userPick == "Cowboy" && browserPick == "Ninja") {result = "lose"}
-//     document.getElementById("result").innerHTML = `You ${result}!`
-// }
