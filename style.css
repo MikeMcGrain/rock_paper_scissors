@@ -14,18 +14,19 @@ body {
 
 p { 
     margin: 0;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     font-size: 13em;
     font-family: CarnivaleeFreakshow;
 }
 
 img {
-    padding: 1em;
-    height: 15em;
+    padding: 3em;
+    height: 13em;
     width: auto;
     cursor: pointer;
+    transition: transform .2s;
 }
 
-button:hover {
-    background: lightgray;
+img:hover {
+    transform: scale(1.5);
 }
