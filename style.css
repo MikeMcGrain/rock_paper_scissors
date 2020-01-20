@@ -1,10 +1,22 @@
-body {
-    text-align: center;
+@font-face {
+    font-family: CarnivaleeFreakshow;
+    src: url(CarnivaleeFreakshow-DLrm.ttf);
 }
 
-h1 {
-    padding-top: 30px;
-    padding-bottom: 40px;
+body {
+    text-align: center;
+    background-color: black;
+    background-image: url(http://www.seekgif.com/uploads/2017/05/pin-slide-background-on-pinterest-22.jpeg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: auto;
+}
+
+p { 
+    margin: 0;
+    padding-bottom: 50px;
+    font-size: 13em;
+    font-family: CarnivaleeFreakshow;
 }
 
 img {
