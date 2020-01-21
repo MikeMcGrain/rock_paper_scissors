@@ -3,32 +3,36 @@
     src: url(fonts/CarnivaleeFreakshow-DLrm.ttf);
 }
 
+@font-face {
+    font-family: BloodType;
+    src: url(fonts/BLOODY.TTF);
+}
 body {
     text-align: center;
     background-color: black;
     background-image: url(http://www.seekgif.com/uploads/2017/05/pin-slide-background-on-pinterest-22.jpeg);
     background-repeat: no-repeat;
     background-position: top;
-    background-size: auto;
+    /* background-size: auto; */
 }
 
 #title { 
     margin: 0;
     padding-bottom: 30px;
-    font-size: 13em;
+    font-size: 11.5vw;
     font-family: CarnivaleeFreakshow;
 }
 
 #user-pick, #browser-pick, #result {
     font-family: CarnivaleeFreakshow;
-    font-size: 5em;
+    font-size: 4vw;
     padding: 0;
     margin: 0;
 }
 
 img {
-    padding: 3em;
-    height: 13em;
+    padding: 2vw;
+    height: 12vw;
     width: auto;
     cursor: pointer;
     transition: transform .2s;

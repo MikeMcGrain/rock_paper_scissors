@@ -28,6 +28,27 @@ function comparePicks(userPick, browserPick) {
             case "Ninja": result = (browserPick == "Cowboy") ? "win" : "lose"; break
             case "Cowboy": result = (browserPick == "Bear") ? "win" : "lose"
         }
-    } 
-    document.getElementById("result").innerHTML = `You ${result}!`
+    }
+
+    let resultStyle
+    switch (result) {
+        case "both die": resultStyle = "color: red; font-family: BloodType"; break
+        case "win": resultStyle = "color: green"; break
+        case "lose": resultStyle = "color: red"
+
+    }
+    document.getElementById("result").innerHTML = `You <span id="result-span" style="${resultStyle}"> ${result} </span>!`
+
+    // let txt = `You ${result}!`
+    // let i = 0;
+    // let speed = 35;
+    // typeWriter()
+    // function typeWriter() {
+    //     if (i < txt.length) {
+    //       document.getElementById("result").innerHTML += txt.charAt(i);
+    //       i++;
+    //       setTimeout(typeWriter, speed);
+    //     }
+    // }
+
 }
