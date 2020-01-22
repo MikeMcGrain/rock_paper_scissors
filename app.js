@@ -4,7 +4,7 @@ document.getElementById("cowboy-btn").addEventListener("click", getUserPick)
 
 function getUserPick() {
     let userPick = this.getAttribute("data-user-pick")
-    document.getElementById("user-pick").innerHTML = `You picked ${userPick}!`  
+    document.getElementById("user-pick").innerHTML = `You picked ${userPick}`  
     comparePicks(userPick,  getBrowserPick())
 }
 
@@ -15,7 +15,7 @@ function getBrowserPick() {
         case 1: browserPick = "Ninja"; break
         case 2: browserPick = "Cowboy"
     }
-    document.getElementById("browser-pick").innerHTML = `Your browser picked ${browserPick}!`
+    document.getElementById("browser-pick").innerHTML = `Browser picked ${browserPick}`
     return browserPick
 }
 
@@ -32,23 +32,9 @@ function comparePicks(userPick, browserPick) {
 
     let resultStyle
     switch (result) {
-        case "both die": resultStyle = "color: red; font-family: BloodType"; break
-        case "win": resultStyle = "color: green"; break
-        case "lose": resultStyle = "color: red"
-
+        case "both die": resultStyle = "font-size: 15vw; color: red; font-family: BloodType"; break
+        case "win": resultStyle = "font-size: 20vw; color: green"; break
+        case "lose": resultStyle = "font-size: 20vw; color: red"
     }
-    document.getElementById("result").innerHTML = `You <span id="result-span" style="${resultStyle}"> ${result} </span>!`
-
-    // let txt = `You ${result}!`
-    // let i = 0;
-    // let speed = 35;
-    // typeWriter()
-    // function typeWriter() {
-    //     if (i < txt.length) {
-    //       document.getElementById("result").innerHTML += txt.charAt(i);
-    //       i++;
-    //       setTimeout(typeWriter, speed);
-    //     }
-    // }
-
+    document.getElementById("result").innerHTML = `You <span id="result-span" style="${resultStyle}"> ${result}</span>!`
 }

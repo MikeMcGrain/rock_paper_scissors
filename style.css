@@ -8,31 +8,27 @@
     src: url(fonts/BLOODY.TTF);
 }
 body {
-    text-align: center;
     background-color: black;
     background-image: url(http://www.seekgif.com/uploads/2017/05/pin-slide-background-on-pinterest-22.jpeg);
     background-repeat: no-repeat;
     background-position: top;
-    /* background-size: auto; */
+    background-size: 100vw;
 }
 
 #title { 
-    margin: 0;
-    padding-bottom: 30px;
-    font-size: 11.5vw;
+    text-align: center;
+    margin: 0px;
+    font-size: 12vw;
     font-family: CarnivaleeFreakshow;
 }
 
-#user-pick, #browser-pick, #result {
-    font-family: CarnivaleeFreakshow;
-    font-size: 4vw;
-    padding: 0;
-    margin: 0;
+div {
+    text-align: center;
 }
 
-img {
+#bear-btn, #ninja-btn, #cowboy-btn {
     padding: 2vw;
-    height: 12vw;
+    height: 10vw;
     width: auto;
     cursor: pointer;
     transition: transform .2s;
@@ -40,4 +36,42 @@ img {
 
 img:hover {
     transform: scale(1.5);
+}
+
+.action-png {
+    height: 12vw;
+    padding: 0px;
+    margin: 0px;
+}
+
+#user-pick {
+    font-family: CarnivaleeFreakshow;
+    font-size: 5vw;
+    text-align: right;
+    margin: 0px;
+    padding-right: 60vw;
+    transform: rotate(10deg) translate(5vw, 2vw); 
+    /* -ms-transform: rotate(10deg); IE 9 */
+    /* -webkit-transform: rotate(10deg); Safari 3-8 */  
+}
+
+#browser-pick {
+    font-family: CarnivaleeFreakshow;
+    font-size: 5vw;
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+    padding-left: 57vw;
+    transform: rotate(-10deg) translate(-2vw, -4vw); 
+    /* -ms-transform: rotate(10deg); IE 9 */
+    /* -webkit-transform: rotate(10deg); Safari 3-8 */
+    margin: 0; 
+}
+
+#result {
+    text-align: center;
+    font-family: CarnivaleeFreakshow;
+    font-size: 10vw;
+    padding: 0px;
+    margin: 0px;
 }
