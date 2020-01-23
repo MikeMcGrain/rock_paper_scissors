@@ -7,6 +7,7 @@
     font-family: BloodType;
     src: url(fonts/BLOODY.TTF);
 }
+
 body {
     background-color: black;
     background-image: url(http://www.seekgif.com/uploads/2017/05/pin-slide-background-on-pinterest-22.jpeg);
@@ -17,13 +18,14 @@ body {
 
 #title { 
     text-align: center;
-    margin: 0px;
+    margin: 0;
     font-size: 12vw;
     font-family: CarnivaleeFreakshow;
 }
 
 div {
     text-align: center;
+    margin: 3vw 0 1vw 0;
 }
 
 #bear-btn, #ninja-btn, #cowboy-btn {
