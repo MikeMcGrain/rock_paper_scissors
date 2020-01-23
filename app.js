@@ -79,18 +79,18 @@ function renderResult(result) {
   let resultStyle
   switch (result) {
     case "tie":
-      resultStyle = "font-size: 15vw; color: red; font-family: BloodType"
+      result = "You both die!"
+      resultStyle = "font-size: 8vw; color: red; font-family: BloodType"
       break
     case "win":
-      resultStyle = "font-size: 20vw; color: green"
+      result = "YOU WIN!"
+      resultStyle = "font-family: RubberStamp; font-size: 10vw; text-decoration: underline; color: green"
       break
     case "lose":
-      resultStyle = "font-size: 20vw; color: red"
+      result = "YOU LOSE!"
+      resultStyle = "font-family: RubberStamp; font-size: 9vw; text-decoration: underline; color: red"
   }
-
-  document.getElementById(
-    "result"
-  ).innerHTML = `<span id="result-span" style="${resultStyle}"> ${result}</span>`
+  document.getElementById("result").innerHTML = `<span id="result-span" style="${resultStyle}"> ${result}</span>`
   document.getElementById("overlay").style.display = "block"
   document.getElementById("overlay").addEventListener("click", function() {
     document.getElementById("overlay").style.display = "none"

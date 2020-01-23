@@ -8,6 +8,11 @@
     src: url(fonts/BLOODY.TTF);
 }
 
+@font-face {
+    font-family: RubberStamp;
+    src: url(fonts/stamped.TTF);
+}
+
 body {
     background-color: black;
     background-image: url(http://www.seekgif.com/uploads/2017/05/pin-slide-background-on-pinterest-22.jpeg);
@@ -17,13 +22,14 @@ body {
 }
 
 #title { 
+    font-family: CarnivaleeFreakshow;
+    font-size: 12vw;
     text-align: center;
     margin: 0;
-    font-size: 12vw;
-    font-family: CarnivaleeFreakshow;
+    padding: 0;
 }
 
-div {
+#btn-container {
     text-align: center;
     margin: 3vw 0 1vw 0;
 }
@@ -81,12 +87,10 @@ p img {
     bottom: 0;
     background-color: rgba(0,0,0,0.1);
     z-index: 2;
-    cursor: pointer;
+    cursor: default;
   }
 
 #result {
-    font-family: CarnivaleeFreakshow;
-    font-size: 50px;
     position: absolute;
     top: 50%;
     left: 50%;
