@@ -20,14 +20,9 @@ function getUserPick(e) {
 function getBrowserPick() {
   let browserPick
   switch (Math.floor(Math.random() * 3)) {
-    case 0:
-      browserPick = "Bear"
-      break
-    case 1:
-      browserPick = "Ninja"
-      break
-    case 2:
-      browserPick = "Cowboy"
+    case 0: browserPick = "Bear"; break
+    case 1: browserPick = "Ninja"; break
+    case 2: browserPick = "Cowboy"
   }
   document.getElementById("browser-pick").innerHTML = `Browser picked ${browserPick}`
   renderPick(browserPick, "browser-pick")
