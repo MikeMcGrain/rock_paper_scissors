@@ -43,6 +43,7 @@ function getResult(userPick, browserPick) {
 }
 
 function renderPick(pick, elementID) {
+  
   let imageLocation
   switch (pick) {
     case "Bear": imageLocation = "images/claws.png"; break
