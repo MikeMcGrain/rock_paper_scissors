@@ -5,20 +5,20 @@ window.addEventListener("load", function() {
 })
 
 function startGame() {
-  let userPick = getUserPick(this)
-  let browserPick = getBrowserPick()
+  const userPick = getUserPick(this)
+  const browserPick = getBrowserPick()
   getResult(userPick, browserPick)
 }
 
 function getUserPick(e) {
-  let userPick = e.getAttribute("data-user-pick")
+  const userPick = e.getAttribute("data-user-pick")
   document.getElementById("user-pick").innerHTML = `You picked ${userPick}`
   renderPick(userPick, "user-pick")
   return userPick
 }
 
 function getBrowserPick() {
-  let browserPick
+  const browserPick
   switch (Math.floor(Math.random() * 3)) {
     case 0:
       browserPick = "Bear"
@@ -29,68 +29,53 @@ function getBrowserPick() {
     case 2:
       browserPick = "Cowboy"
   }
-  document.getElementById(
-    "browser-pick"
-  ).innerHTML = `Browser picked ${browserPick}`
+  document.getElementById("browser-pick").innerHTML = `Browser picked ${browserPick}`
   renderPick(browserPick, "browser-pick")
   return browserPick
 }
 
 function getResult(userPick, browserPick) {
   let result
-  if (userPick == browserPick) {
-    result = "tie"
-  } else {
+  if (userPick == browserPick) {result = "tie"} 
+  else {
     switch (userPick) {
-      case "Bear":
-        result = browserPick == "Ninja" ? "win" : "lose"
-        break
-      case "Ninja":
-        result = browserPick == "Cowboy" ? "win" : "lose"
-        break
-      case "Cowboy":
-        result = browserPick == "Bear" ? "win" : "lose"
+      case "Bear": result = (browserPick == "Ninja") ? "win" : "lose"; break
+      case "Ninja": result = (browserPick == "Cowboy") ? "win" : "lose"; break
+      case "Cowboy": result = (browserPick == "Bear") ? "win" : "lose"
     }
   }
   renderResult(result)
 }
 
 function renderPick(pick, elementID) {
-  let location
+  let imageLocation
   switch (pick) {
-    case "Bear":
-      location = "images/claws.png"
-      break
-    case "Ninja":
-      location = "images/kapow.png"
-      break
-    case "Cowboy":
-      location = "images/bang.png"
+    case "Bear": imageLocation = "images/claws.png"; break
+    case "Ninja": imageLocation = "images/kapow.png"; break
+    case "Cowboy": imageLocation = "images/bang.png"
   }
-
-  let image = document.createElement("img")
-  image.setAttribute("src", location)
-  image.setAttribute("alt", pick)
+  let img = document.createElement("img")
+  img.setAttribute("src", imageLocation)
+  img.setAttribute("alt", pick)
   let p = document.getElementById(elementID)
-  p.appendChild(image)
+  p.appendChild(img)
 }
 
 function renderResult(result) {
-  let resultStyle
+  let p = document.getElementById("result")
   switch (result) {
     case "tie":
-      result = "You both die!"
-      resultStyle = "font-size: 8vw; color: red; font-family: BloodType"
+      p.innerHTML = "You both die!"
+      p.setAttribute("style", "font-family: BloodType; font-size: 12vw; color: red; transform: translate(-50%,-50%)")
       break
     case "win":
-      result = "YOU WIN!"
-      resultStyle = "font-family: RubberStamp; font-size: 10vw; text-decoration: underline; color: green"
+      p.innerHTML = "YOU WIN!"
+      p.setAttribute("style", "font-family: RubberStamp; font-size: 14vw; color: green; text-decoration: underline; top: 50%")
       break
     case "lose":
-      result = "YOU LOSE!"
-      resultStyle = "font-family: RubberStamp; font-size: 9vw; text-decoration: underline; color: red"
+      p.innerHTML = "YOU LOSE!"
+      p.setAttribute("style", "font-family: RubberStamp; font-size: 14vw; color: red; text-decoration: underline; transform: rotate(4deg) translate(-50%,-50%)")
   }
-  document.getElementById("result").innerHTML = `<span id="result-span" style="${resultStyle}"> ${result}</span>`
   document.getElementById("overlay").style.display = "block"
   document.getElementById("overlay").addEventListener("click", function() {
     document.getElementById("overlay").style.display = "none"

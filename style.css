@@ -71,9 +71,8 @@ p img {
     padding: 0 0 0 58vw;
     margin: 0;
     transform: rotate(-10deg) translate(-2vw, -4vw); 
-    /* -ms-transform: rotate(10deg); IE 9 */
-    /* -webkit-transform: rotate(10deg); Safari 3-8 */
-    margin: 0; 
+    /* -ms-transform: rotate(-10deg); IE 9 */
+    /* -webkit-transform: rotate(-10deg); Safari 3-8 */
 }
 
 #overlay {
@@ -91,9 +90,12 @@ p img {
   }
 
 #result {
-    position: absolute;
-    top: 50%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    top: 55%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: rotate(-4deg) translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
 }
