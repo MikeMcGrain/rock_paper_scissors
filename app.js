@@ -18,7 +18,7 @@ function getUserPick(e) {
 }
 
 function getBrowserPick() {
-  const browserPick
+  let browserPick
   switch (Math.floor(Math.random() * 3)) {
     case 0:
       browserPick = "Bear"
