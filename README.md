@@ -11,7 +11,6 @@ Take a look [here](https://mikemcgrain.github.io/rock_paper_scissors/)
 <br>
 
 <image src="images/screenshot1.png">
-<image src="images/screenshot1.png">
 
 ## Summary
 
