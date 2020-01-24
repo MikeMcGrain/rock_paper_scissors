@@ -63,15 +63,15 @@ function renderResult(result) {
   switch (result) {
     case "tie":
       p.innerHTML = "You both die!"
-      p.setAttribute("style", "font-family: BloodType; font-size: 12vw; color: red; transform: translate(-50%,-50%)")
+      p.setAttribute("style", "font-family: BloodType; font-size: 12vw; color: red")
       break
     case "win":
       p.innerHTML = "YOU WIN!"
-      p.setAttribute("style", "font-family: RubberStamp; font-size: 14vw; color: green; text-decoration: underline; top: 50%")
+      p.setAttribute("style", "font-family: RubberStamp; font-size: 14vw; color: green; text-decoration: underline")
       break
     case "lose":
       p.innerHTML = "YOU LOSE!"
-      p.setAttribute("style", "font-family: RubberStamp; font-size: 14vw; color: red; text-decoration: underline; transform: rotate(4deg) translate(-50%,-50%)")
+      p.setAttribute("style", "font-family: RubberStamp; font-size: 14vw; color: red; text-decoration: underline")
   }
   document.getElementById("overlay").style.display = "block"
   document.getElementById("overlay").addEventListener("click", function() {

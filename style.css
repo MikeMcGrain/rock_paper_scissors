@@ -89,12 +89,9 @@ body {
   }
 
 #result {
-    padding: 0;
     margin: 0;
     position: relative;
     text-align: center;
-    top: 55%;
-    left: 50%;
-    transform: rotate(-4deg) translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
+    top: 12vw;
+    transform: rotate(-4deg);
 }
