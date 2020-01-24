@@ -50,6 +50,7 @@ function renderPick(pick, elementID) {
     case "Cowboy": imageLocation = "images/bang.png"
   }
   let img = document.createElement("img")
+  img.setAttribute("id", "action-image")
   img.setAttribute("src", imageLocation)
   img.setAttribute("alt", pick)
   let p = document.getElementById(elementID)

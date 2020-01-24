@@ -46,13 +46,6 @@ body {
     transform: scale(1.5)
 }
 
-p img {
-    float: left;
-    padding-left: 10vw;
-    height: 15vw;
-    width: auto;
-}
-
 #user-pick {
     font-family: CarnivaleeFreakshow;
     font-size: 5vw;
@@ -73,6 +66,13 @@ p img {
     transform: rotate(-10deg) translate(-2vw, -4vw); 
     /* -ms-transform: rotate(-10deg); IE 9 */
     /* -webkit-transform: rotate(-10deg); Safari 3-8 */
+}
+
+#action-image {
+    float: left;
+    padding-left: 10vw;
+    height: 15vw;
+    width: auto;
 }
 
 #overlay {
