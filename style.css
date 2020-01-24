@@ -30,19 +30,21 @@ body {
 
 #btn-container {
     text-align: center;
-    margin: 3vw 0 1vw 0;
+    margin: 16vw 0 1vw 0;
+    transform: scale(2.70, 2.70);
+    transition: transform .2s;
 }
 
 #bear-btn, #ninja-btn, #cowboy-btn {
-    padding: 2vw;
-    height: 9vw;
+    padding: 1vw;
+    height: 8vw;
     width: auto;
     cursor: pointer;
     transition: transform .2s;
 }
 
 #bear-btn:hover, #ninja-btn:hover, #cowboy-btn:hover {
-    transform: scale(1.5)
+    transform: scale(1.65)
 }
 
 #user-pick {
@@ -51,7 +53,7 @@ body {
     text-align: right;
     padding: 0 60vw 0 0;
     margin: 0;
-    transform: rotate(10deg) translate(5vw, 2vw); 
+    transform: rotate(10deg) translate(5vw, 2vw);
     -ms-transform: rotate(10deg); /* IE 9 */
     /* -webkit-transform: rotate(10deg); */ /* Safari 3-8 */  
 }

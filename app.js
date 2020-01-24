@@ -5,6 +5,8 @@ window.addEventListener("load", function() {
 })
 
 function startGame() {
+  let div = document.getElementById("btn-container")
+  div.setAttribute("style" ,"margin: 3vw 0 1vw 0; transform: none")
   const userPick = getUserPick(this)
   const browserPick = getBrowserPick()
   getResult(userPick, browserPick)
@@ -78,5 +80,7 @@ function renderResult(result) {
     document.getElementById("overlay").style.display = "none"
     document.getElementById("user-pick").innerHTML = ""
     document.getElementById("browser-pick").innerHTML = ""
+    let div = document.getElementById("btn-container")
+    div.setAttribute("style" ,"margin: 16vw 0 1vw 0; transform: scale(2.75, 2.75)")
   })
 }
