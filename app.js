@@ -12,14 +12,14 @@ function startGame() {
   let div = document.getElementById("btn-container")
   div.setAttribute("style" ,"margin: 3vw 0 1vw 0; transform: none")
 
-  const userPick = this.getAttribute("data-user-pick")
-  renderPick(userPick, "user-pick")
+  const USER_PICK = this.getAttribute("data-user-pick")
+  renderPick(USER_PICK, "user-pick")
 
-  const browserPick = getBrowserPick()
-  renderPick(browserPick, "browser-pick")
+  const BROWSER_PICK = getBrowserPick()
+  renderPick(BROWSER_PICK, "browser-pick")
 
-  const result = getResult(userPick, browserPick)
-  renderResult(result)
+  const RESULT = getResult(USER_PICK, BROWSER_PICK)
+  renderResult(RESULT)
 }
 
 function getBrowserPick() {
@@ -30,13 +30,13 @@ function getBrowserPick() {
   }
 }
 
-function getResult(userPick, browserPick) {
-  if (userPick == browserPick) {return "tie"} 
+function getResult(USER_PICK, BROWSER_PICK) {
+  if (USER_PICK == BROWSER_PICK) {return "tie"} 
 
-  switch (userPick) {
-    case BEAR: return (browserPick == NINJA) ? "win" : "lose"; break
-    case NINJA: return (browserPick == COWBOY) ? "win" : "lose"; break
-    case COWBOY: return (browserPick == BEAR) ? "win" : "lose"
+  switch (USER_PICK) {
+    case BEAR: return (BROWSER_PICK == NINJA) ? "win" : "lose"; break
+    case NINJA: return (BROWSER_PICK == COWBOY) ? "win" : "lose"; break
+    case COWBOY: return (BROWSER_PICK == BEAR) ? "win" : "lose"
   }
 }
 
