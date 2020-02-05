@@ -14,11 +14,9 @@ function startGame() {
   div.setAttribute("style" ,"margin: 3vw 0 1vw 0; transform: none")
 
   const userPick = this.getAttribute("data-user-pick")
-  document.getElementById("user-pick").innerHTML = `You picked ${userPick}`
   renderPick(userPick, "user-pick")
 
   const browserPick = getBrowserPick()
-  document.getElementById("browser-pick").innerHTML = `Browser picked ${browserPick}`
   renderPick(browserPick, "browser-pick")
 
   const result = getResult(userPick, browserPick)
@@ -44,7 +42,10 @@ function getResult(userPick, browserPick) {
 }
 
 function renderPick(pick, elementID) {
-  
+  elementID == "user-pick" 
+    ? document.getElementById(elementID).innerHTML = `You picked ${pick}`
+    : document.getElementById(elementID).innerHTML = `Browser picked ${pick}`
+
   let imageLocation
   switch (pick) {
     case BEAR: imageLocation = "images/claws.png"; break
