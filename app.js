@@ -1,3 +1,8 @@
+const BEAR = "Bear"
+const NINJA = "Ninja"
+const COWBOY = "Cowboy"
+
+
 window.addEventListener("load", function() {
   document.getElementById("bear-btn").addEventListener("click", startGame)
   document.getElementById("ninja-btn").addEventListener("click", startGame)
@@ -7,50 +12,44 @@ window.addEventListener("load", function() {
 function startGame() {
   let div = document.getElementById("btn-container")
   div.setAttribute("style" ,"margin: 3vw 0 1vw 0; transform: none")
-  const userPick = getUserPick(this)
-  const browserPick = getBrowserPick()
-  getResult(userPick, browserPick)
-}
 
-function getUserPick(e) {
-  const userPick = e.getAttribute("data-user-pick")
+  const userPick = this.getAttribute("data-user-pick")
   document.getElementById("user-pick").innerHTML = `You picked ${userPick}`
   renderPick(userPick, "user-pick")
-  return userPick
+
+  const browserPick = getBrowserPick()
+  document.getElementById("browser-pick").innerHTML = `Browser picked ${browserPick}`
+  renderPick(browserPick, "browser-pick")
+
+  const result = getResult(userPick, browserPick)
+  renderResult(result)
 }
 
 function getBrowserPick() {
-  let browserPick
   switch (Math.floor(Math.random() * 3)) {
-    case 0: browserPick = "Bear"; break
-    case 1: browserPick = "Ninja"; break
-    case 2: browserPick = "Cowboy"
+    case 0: return BEAR
+    case 1: return NINJA
+    case 2: return COWBOY
   }
-  document.getElementById("browser-pick").innerHTML = `Browser picked ${browserPick}`
-  renderPick(browserPick, "browser-pick")
-  return browserPick
 }
 
 function getResult(userPick, browserPick) {
-  let result
-  if (userPick == browserPick) {result = "tie"} 
-  else {
-    switch (userPick) {
-      case "Bear": result = (browserPick == "Ninja") ? "win" : "lose"; break
-      case "Ninja": result = (browserPick == "Cowboy") ? "win" : "lose"; break
-      case "Cowboy": result = (browserPick == "Bear") ? "win" : "lose"
-    }
+  if (userPick == browserPick) {return "tie"} 
+
+  switch (userPick) {
+    case BEAR: return (browserPick == NINJA) ? "win" : "lose"; break
+    case NINJA: return (browserPick == COWBOY) ? "win" : "lose"; break
+    case COWBOY: return (browserPick == BEAR) ? "win" : "lose"
   }
-  renderResult(result)
 }
 
 function renderPick(pick, elementID) {
   
   let imageLocation
   switch (pick) {
-    case "Bear": imageLocation = "images/claws.png"; break
-    case "Ninja": imageLocation = "images/kapow.png"; break
-    case "Cowboy": imageLocation = "images/bang.png"
+    case BEAR: imageLocation = "images/claws.png"; break
+    case NINJA: imageLocation = "images/kapow.png"; break
+    case COWBOY: imageLocation = "images/bang.png"
   }
   let img = document.createElement("img")
   img.setAttribute("id", "action-image")
