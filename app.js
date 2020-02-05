@@ -2,7 +2,6 @@ const BEAR = "Bear"
 const NINJA = "Ninja"
 const COWBOY = "Cowboy"
 
-
 window.addEventListener("load", function() {
   document.getElementById("bear-btn").addEventListener("click", startGame)
   document.getElementById("ninja-btn").addEventListener("click", startGame)
