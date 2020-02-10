@@ -2,6 +2,10 @@ const BEAR = "Bear"
 const NINJA = "Ninja"
 const COWBOY = "Cowboy"
 
+const BEAR_ATTACK_IMG = "images/claws.png"
+const NINJA_ATTACK_IMG = "images/kapow.png"
+const COWBOY_ATTACK_IMG = "images/bang.png"
+
 window.addEventListener("load", function() {
   document.getElementById("bear-btn").addEventListener("click", startGame)
   document.getElementById("ninja-btn").addEventListener("click", startGame)
@@ -47,9 +51,9 @@ function renderPick(pick, elementID) {
 
   let imageLocation
   switch (pick) {
-    case BEAR: imageLocation = "images/claws.png"; break
-    case NINJA: imageLocation = "images/kapow.png"; break
-    case COWBOY: imageLocation = "images/bang.png"
+    case BEAR: imageLocation = BEAR_ATTACK_IMG; break
+    case NINJA: imageLocation = NINJA_ATTACK_IMG; break
+    case COWBOY: imageLocation = COWBOY_ATTACK_IMG
   }
   let img = document.createElement("img")
   img.setAttribute("id", "action-image")
